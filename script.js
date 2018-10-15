@@ -1,5 +1,3 @@
-
-
 // js email validation
 // reg ex email validator 
 function regEmail(email) {
