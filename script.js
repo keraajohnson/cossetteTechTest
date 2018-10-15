@@ -1,4 +1,5 @@
 
+
 // js email validation
 // reg ex email validator 
 function regEmail(email) {
@@ -21,7 +22,7 @@ function validateEmail() {
 // js phone validation 
 // reg ex phone validator
 function regPhone(phone) {
-    const re = /^ (\+\d{ 1, 2 } \s)?\(?\d{ 3 } \)?[\s.-]\d{ 3 } [\s.-]\d{ 4 } $/;
+    const re = /^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/;
     return re.test(phone)
 }
 
@@ -66,7 +67,6 @@ const lastName = document.getElementById('lastName');
 // on click event handler on the click of the submit button
 document.getElementById('submit').addEventListener('click', function (e) {
     console.log('hello')
-    e.preventDefault();
     if (firstName.value === ""
     || lastName.value === ""
     || validateEmail() === false

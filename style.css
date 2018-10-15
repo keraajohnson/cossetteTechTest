@@ -46,6 +46,10 @@ header {
     margin: 10px 0;
 }
 
+.topNav {
+    padding-top: 10px;
+}
+
 .topNav .logo {
     background-color: lightgray;
     width: 130px;
@@ -75,8 +79,8 @@ header .main {
 
 .userForm {
     background-color: #EDEEF0;
-    padding: 20px 0;
-    padding-bottom: 90px;
+    padding: 10px 0;
+    padding-bottom: 80px;
 }
 
 label {
@@ -100,7 +104,8 @@ span {
 }
 
 input[type=text], 
-input[type=email] {
+input[type=email],
+input[type=tel] {
     padding: 5px 0;
     font-size: 1.5rem;
     letter-spacing: 1.2px;
@@ -109,7 +114,8 @@ input[type=email] {
 }
 
 input[type=text]:focus, 
-input[type=email]:focus {
+input[type=email]:focus,
+input[type=tel]:focus {
     outline: none;
     background: #808080;
 }
@@ -141,7 +147,7 @@ footer {
     background-color: #282828;
     color: white;
     text-align: center;
-    padding: 5px 0;
+    padding: 8px 0;
 }
 
 .topFooter .logo {
@@ -157,11 +163,16 @@ footer {
     font-size: 1rem;
 }
 
+.topFooter .footerLinks {
+    padding: 5px 0;
+}
+
 .topFooter .footerLinks a {
     color: white;
     text-decoration: none;
     margin: 0 5px;
 }
+
 
 /* bottom footer */
 
@@ -208,6 +219,7 @@ footer {
     }
 }
 
+/* min width 600px */
 @media only screen and (min-width: 600px) {
     /* header */
     header .main {
@@ -230,14 +242,66 @@ footer {
         display: flex;
         margin: 15px 0;
     }
-    
-    .postal__container {
-        width: 70%;
+
+    .firstName, 
+    .email {
+        margin-right: 15px;
     }
-    
+
+    .lastName__label, 
+    .phone__label,
+    .lastName, 
+    .phone {
+        margin-left: 15px;
+    }
+
+    .postal__container {
+        width: 60%;
+    }
+
+    input[type=submit]:hover {
+        background-color: #282828;
+    }  
 }
 
-/* USE FOR LARGER SIZES */
-/* input[type=submit]:hover {
-    background-color: #282828;
-} */
+/* min width 768px */
+@media only screen and (min-width: 768px) {
+     .main h1 {
+        font-size: 2.4rem;
+    }
+}
+
+/* min width 993px */
+@media only screen and (min-width: 993px) {
+    .wrapper {
+        max-width: 1080px;
+        width: 60%;
+        margin: 0 auto;
+    } 
+    
+    .main h1 {
+        font-size: 2.3rem;
+    }
+}
+
+/* min width 1003px */
+@media only screen and (min-width: 1003px) {
+     .main h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* min width 1225px */
+@media only screen and (min-width: 1225px) {
+     .main h1 {
+        font-size: 3rem;
+    }
+}
+
+/* min width 1440px */
+@media only screen and (min-width: 1440px) {
+    .main h1 {
+            font-size: 3.5rem;
+        }
+} 
+

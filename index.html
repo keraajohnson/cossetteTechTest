@@ -49,12 +49,13 @@
                     <!-- email address label/input -->
                     <div class="email__container">
                         <label for="email" class="email__label">Email Address <span>*</span></label>
-                        <input required type="email" name="email" class="email" id="email">
+                        <input required type="email" name="email" class="email" id="email" 
+                        pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$">
                     </div>
                     <!-- phone number label/input -->
                     <div class="phone__container">
                         <label for="phone" class="phone__label">Phone Number <span>*</span></label>
-                        <input required type="text" name="phone" class="phone" id="phone">
+                        <input required type="tel" name="phone" class="phone" id="phone" pattern="/^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/">
                     </div>
                 </div>
                 <!-- address container -->
@@ -62,7 +63,7 @@
                     <!-- postal code label/input -->
                     <div class="postal__container">
                         <label for="postalCode" class="postalCode__label">Postal Code <span>*</span></label>
-                        <input type="text" name="postalCode" class="postalCode" id="postalCode">
+                        <input type="text" name="postalCode" class="postalCode" id="postalCode" pattern="/^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/">
                     </div>
                 </div>
                 <div class="submitForm">
